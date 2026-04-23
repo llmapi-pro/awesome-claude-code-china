@@ -7,6 +7,7 @@
 - [Official](#official)
 - [Configurable Backends](#configurable-backends)
 - [Setup & Tooling](#setup--tooling)
+- [Skills & Session Management](#skills--session-management)
 - [Articles & Guides](#articles--guides)
 - [Communities](#communities)
 - [Contributing](#contributing)
@@ -30,6 +31,13 @@ Claude Code CLI supports the documented `ANTHROPIC_BASE_URL` environment variabl
 
 - [llmapi-pro/claude-code-setup](https://github.com/llmapi-pro/claude-code-setup) — One-line installer (Windows/macOS/Linux) + setup guide.
 - [llmapi-pro/claude-md-templates](https://github.com/llmapi-pro/claude-md-templates) — `CLAUDE.md` templates for popular stacks.
+
+## Skills & Session Management
+
+Extensions that live in `~/.claude/skills/` and add specialized workflows to Claude Code.
+
+- [llmapi-pro/claude-next](https://github.com/llmapi-pro/claude-next) — One-key handoff between deep sessions: `/next` in old window, paste `continue A` / `继续 A` in new window. Independent fresh-context audit verifies every claim against the filesystem before handoff.
+- [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — Lifecycle-hook based memory capture with AI compression and Chroma-vector retrieval across sessions.
 
 ## Articles & Guides
 
