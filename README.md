@@ -147,4 +147,17 @@ PR 欢迎。每个条目应：
 
 ---
 
+## Sponsorship & Collaboration
+
+This list is maintained alongside [llmapi.pro](https://llmapi.pro), an Anthropic-protocol-compatible API relay accessible from mainland China. We're an independent team, open to conversations on:
+
+- **Sponsored placement** in this list (clearly disclosed) for tools serving Chinese-region Claude Code users.
+- **Tooling partnerships** — your IDE extension, router, or agentic framework, listed as a tested companion.
+- **Co-marketing** for tools and services in the same ecosystem — mutual discount codes, joint launches.
+- **Acquisition / strategic conversations**.
+
+**Contact:** [partnerships@llmapi.pro](mailto:partnerships@llmapi.pro) · or open a PR / issue.
+
+---
+
 > This list is independent and not affiliated with Anthropic. Claude Code is Anthropic's official tool; "Claude" and "Claude Code" are trademarks of Anthropic, PBC.
