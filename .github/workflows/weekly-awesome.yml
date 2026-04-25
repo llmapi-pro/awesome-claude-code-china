@@ -1,7 +1,10 @@
 name: Weekly awesome list refresh
 on:
-  schedule:
-    - cron: '0 6 * * 5'   # Every Friday 06:00 UTC = 14:00 Asia/Shanghai
+  # Schedule DISABLED 2026-04-25: Cloudflare 524 timeout on llmapi.pro for
+  # web-search-driven agentic tasks (single turn > 100s). Same root cause
+  # as intel scan. Switching to manual mode (Claude Code direct) for now.
+  # schedule:
+  #   - cron: '0 6 * * 5'
   workflow_dispatch:
 
 permissions:
