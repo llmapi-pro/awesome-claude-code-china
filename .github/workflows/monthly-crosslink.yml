@@ -1,0 +1,100 @@
+name: Monthly cross-link from journal
+on:
+  schedule:
+    - cron: '0 4 25 * *'   # 25th of every month, 04:00 UTC = 12:00 Asia/Shanghai
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monthly-crosslink
+  cancel-in-progress: false
+
+jobs:
+  crosslink:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Configure git identity
+        run: |
+          git config user.email "noreply@llmapi.pro"
+          git config user.name "llmapi-pro automation"
+
+      - name: Clone journal repo (read-only)
+        run: |
+          git clone --depth 50 https://github.com/llmapi-pro/journal.git /tmp/journal
+
+      - name: Build "Recent journal posts" section
+        run: |
+          # List the 5 most recent journal articles by filename date prefix
+          # (filenames are YYYY-MM-DD-slug.md; sort -r gives newest first)
+          BLOCK_FILE=/tmp/recent-block.md
+
+          echo "## Recent posts from the maintainer's journal" > "$BLOCK_FILE"
+          echo "" >> "$BLOCK_FILE"
+          echo "Engineering notes and postmortems from running the relay this list maintains alongside, hosted at [llmapi-pro/journal](https://github.com/llmapi-pro/journal):" >> "$BLOCK_FILE"
+          echo "" >> "$BLOCK_FILE"
+
+          ls /tmp/journal/articles/2*.md 2>/dev/null | sort -r | head -5 | while read article_file; do
+            slug=$(basename "$article_file" .md)
+            # Extract title from first H1 line
+            title=$(grep -m1 '^# ' "$article_file" | sed 's/^# //' | head -c 200)
+            if [ -n "$title" ]; then
+              echo "- [${title}](https://github.com/llmapi-pro/journal/blob/main/articles/${slug}.md)" >> "$BLOCK_FILE"
+            fi
+          done
+
+          echo "" >> "$BLOCK_FILE"
+          echo "<!-- recent-journal-posts-end -->" >> "$BLOCK_FILE"
+
+          cat "$BLOCK_FILE"
+
+      - name: Update README with the section
+        run: |
+          # Find marker pair `<!-- recent-journal-posts-start -->` ... `<!-- recent-journal-posts-end -->`
+          # If absent, insert before the final disclaimer (`> This list is independent`).
+
+          if grep -q '<!-- recent-journal-posts-start -->' README.md; then
+            # Replace existing block
+            python3 <<'PYEOF'
+          import re
+          content = open('README.md', encoding='utf-8').read()
+          new_block = open('/tmp/recent-block.md', encoding='utf-8').read()
+          # Pattern: <!-- recent-journal-posts-start --> ... <!-- recent-journal-posts-end -->
+          pattern = re.compile(r'<!-- recent-journal-posts-start -->.*?<!-- recent-journal-posts-end -->', re.DOTALL)
+          replacement = '<!-- recent-journal-posts-start -->\n' + new_block.strip() + '\n<!-- recent-journal-posts-end -->'
+          content = pattern.sub(replacement, content)
+          open('README.md', 'w', encoding='utf-8').write(content)
+          print('Replaced existing block')
+          PYEOF
+          else
+            # Insert before disclaimer
+            python3 <<'PYEOF'
+          content = open('README.md', encoding='utf-8').read()
+          new_block = open('/tmp/recent-block.md', encoding='utf-8').read()
+          marker = '> This list is independent'
+          idx = content.rfind(marker)
+          if idx == -1:
+              import sys
+              print('ERROR: disclaimer marker not found', file=sys.stderr)
+              sys.exit(1)
+          full = '<!-- recent-journal-posts-start -->\n' + new_block.strip() + '\n<!-- recent-journal-posts-end -->\n\n---\n\n'
+          content = content[:idx] + full + content[idx:]
+          open('README.md', 'w', encoding='utf-8').write(content)
+          print('Inserted new block before disclaimer')
+          PYEOF
+          fi
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "No README changes; skipping commit."
+            exit 0
+          fi
+          git add README.md
+          git commit -m "Refresh recent journal posts cross-link"
+          git push origin main
