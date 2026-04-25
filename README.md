@@ -163,4 +163,20 @@ This list is maintained alongside [llmapi.pro](https://llmapi.pro), an Anthropic
 
 ---
 
+<!-- recent-journal-posts-start -->
+## Recent posts from the maintainer's journal
+
+Engineering notes and postmortems from running the relay this list maintains alongside, hosted at [llmapi-pro/journal](https://github.com/llmapi-pro/journal):
+
+- [Twelve protocol patches behind one relay](https://github.com/llmapi-pro/journal/blob/main/articles/2026-04-25-twelve-patches-behind-one-relay.md)
+- [The backend trap: when your customers don't pick you, your distributors do](https://github.com/llmapi-pro/journal/blob/main/articles/2026-04-25-the-backend-trap.md)
+- [Engineering depth: a technical inventory](https://github.com/llmapi-pro/journal/blob/main/articles/2026-04-25-engineering-depth-technical-inventory.md)
+- [Drain deploy: how to swap a relay without tearing live SSE](https://github.com/llmapi-pro/journal/blob/main/articles/2026-04-25-drain-deploy-no-tearing-live-sse.md)
+- [Why we say "Claude-compatible," not "Claude"](https://github.com/llmapi-pro/journal/blob/main/articles/2026-04-25-claude-compatible-not-claude.md)
+
+<!-- recent-journal-posts-end -->
+<!-- recent-journal-posts-end -->
+
+---
+
 > This list is independent and not affiliated with Anthropic. Claude Code is Anthropic's official tool; "Claude" and "Claude Code" are trademarks of Anthropic, PBC.
