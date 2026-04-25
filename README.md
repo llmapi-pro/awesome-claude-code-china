@@ -20,7 +20,7 @@ The **international** counterpart maintained by [@hesreallyhim](https://github.c
 
 - [Setup Guides](#setup-guides)
 - [Mirror & Relay Services](#mirror--relay-services)
-- [Provider Switchers & Routers](#provider-switchers--routers)
+- [Provider Manager / Client Tools](#provider-manager--client-tools)
 - [Self-Hosted Relay Tools](#self-hosted-relay-tools)
 - [Chinese-Language Tutorials](#chinese-language-tutorials)
 - [CLAUDE.md Templates](#claudemd-templates)
@@ -48,12 +48,15 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
 
-## Provider Switchers & Routers
+## Provider Manager / Client Tools
 
-Tools to manage and switch between multiple Claude / Anthropic-compatible upstreams.
+Desktop and CLI tools that manage Claude Code configuration profiles, subscription switching, and multi-provider routing. Useful when you use more than one relay.
 
-- [farion1231/cc-switch](https://github.com/farion1231/cc-switch) — Tauri-based desktop app for managing Claude Code / Codex / Gemini CLI / OpenCode profiles. Tracks active provider per session.
+- [farion1231/cc-switch](https://github.com/farion1231/cc-switch) — Tauri-based desktop app for managing Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw profiles. Most popular tool in this category (50k+ stars). Tracks active provider per session.
 - [musistudio/claude-code-router](https://github.com/musistudio/claude-code-router) — Drop-in router that lets Claude Code talk to multiple model providers (OpenRouter, DeepSeek, Ollama, Gemini, Volcengine, SiliconFlow).
+- [ding113/claude-code-hub](https://github.com/ding113/claude-code-hub) — Modern Claude Code & Codex API proxy with load balancing, user management, and usage stats.
+- [npow/claude-relay](https://github.com/npow/claude-relay) — Drop-in OpenAI/Anthropic API server routed through Claude Code itself.
+- [chadbyte/clay](https://github.com/chadbyte/claude-relay) — Turn Claude Code into a team workspace, single command across devices.
 
 ## Self-Hosted Relay Tools
 
