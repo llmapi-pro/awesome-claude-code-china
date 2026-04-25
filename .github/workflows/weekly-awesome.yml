@@ -1,0 +1,70 @@
+name: Weekly awesome list refresh
+on:
+  schedule:
+    - cron: '0 6 * * 5'   # Every Friday 06:00 UTC = 14:00 Asia/Shanghai
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-awesome
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Configure git identity
+        run: |
+          git config user.email "noreply@llmapi.pro"
+          git config user.name "llmapi-pro automation"
+
+      - name: Run weekly refresh task
+        env:
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+        run: |
+          cat > /tmp/prompt.txt <<'PROMPT_EOF'
+          You are maintaining `llmapi-pro/awesome-claude-code-china`, a curated list of Claude Code resources for Chinese-region developers. Your job today is a weekly refresh: find 3-8 new high-quality resources and add them.
+
+          === HARD RULES ===
+          - Audience: developers in mainland China using Claude Code
+          - One-line factual descriptions, no marketing copy, alphabetical within sections
+          - Disclose any commercial relationships
+          - Maintainer's own service (llmapi.pro) is already listed — do NOT re-add
+          - Do NOT add llmapi-pro org repos (already in Related Projects)
+
+          TASK
+          1. Read README.md to understand current structure and listings
+          2. Use WebSearch to find new resources from the last 7-14 days
+          3. Verify each candidate with WebFetch (HTTP 200, recent activity, real value)
+          4. Add 3-8 verified entries to relevant sections
+          5. Tag any paid services with "*(Disclosure: commercial service.)*"
+          6. If nothing qualifies, do a small maintenance commit (typo fix, sort order)
+
+          COMMIT
+          git add README.md
+          git commit -m "Add resources: <brief summary>"
+          git push origin main
+
+          FINAL OUTPUT: count of entries added, brief list, commit SHA + URL.
+
+          Do NOT touch files outside README.md. Do NOT modify other repos.
+          PROMPT_EOF
+
+          claude --print --dangerously-skip-permissions --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" < /tmp/prompt.txt
