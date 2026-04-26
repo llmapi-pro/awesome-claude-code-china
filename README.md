@@ -84,6 +84,7 @@ Open-source projects to run your own Claude-compatible relay.
 - [LinuxDo](https://linux.do) — Active Chinese-language forum where Claude Code users share guides and tips. Most organic referral traffic to Chinese Claude Code services originates here.
 - [V2EX `/go/openai`](https://www.v2ex.com/go/openai) — Chinese developer community discussions.
 - [r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/) — English-speaking Reddit community (linked for cross-reference).
+- [Claude Code Relay Hub (Discord)](https://discord.gg/jAXY9Eh5zZ) — English-friendly Discord for Claude Code users: relay APIs, multi-provider routing, configs, troubleshooting. Independent and not affiliated with Anthropic. *(Maintained by this list's author.)*
 
 ## International Resources
 
