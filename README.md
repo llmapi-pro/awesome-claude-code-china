@@ -96,6 +96,7 @@ Open-source projects to run your own Claude-compatible relay.
 
 From the same maintainer:
 
+- **[AI Delivery Spec](https://github.com/franklinxkk/ai-delivery-spec)** - Spec-driven delivery framework: PRD+FRR+AC-YAML+WBS from prototypes. Works with Claude Code/Cursor/Codex. v4.9.7.
 - [llmapi-pro/claude-code-setup](https://github.com/llmapi-pro/claude-code-setup) — One-line Claude Code installer.
 - [llmapi-pro/claude-md-templates](https://github.com/llmapi-pro/claude-md-templates) — `CLAUDE.md` templates by stack.
 - [llmapi-pro/claude-next](https://github.com/llmapi-pro/claude-next) — One-key handoff for deep Claude Code sessions.
