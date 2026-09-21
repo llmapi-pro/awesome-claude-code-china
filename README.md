@@ -45,6 +45,7 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 - [AIGoCode](https://aigocode.com) — Integrated Claude Code / Codex / Gemini platform.
 - [DMXAPI](https://www.dmxapi.cn) — Multi-model relay with enterprise plans.
 - [hvoy.ai](https://hvoy.ai) — Public price-tracking and ranking dashboard for Claude API relay services.
+- [Kuafushe API](https://kuafushe.cc) — Anthropic- and OpenAI-compatible relay accessible from China; multi-model aggregation; Alipay/WeChat; public per-group pricing. *(Disclosure: submitted by the operator.)*
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
 
