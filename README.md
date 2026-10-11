@@ -35,6 +35,7 @@ The **international** counterpart maintained by [@hesreallyhim](https://github.c
 - [llmapi-pro/claude-code-setup](https://github.com/llmapi-pro/claude-code-setup) — One-line installer (PowerShell / macOS / Linux) for Claude Code with a Claude-compatible relay backend; no VPN required.
 - [Anthropic Official Docs](https://docs.anthropic.com/claude/docs/claude-code) — Official Claude Code documentation.
 - [Claude Code on npm](https://www.npmjs.com/package/@anthropic-ai/claude-code) — Anthropic's official CLI package.
+- [LDG-gitgit/LDG_Gadget](https://github.com/LDG-gitgit/LDG_Gadget) — One-click Windows installer (single exe, 32/64-bit) for Claude Code with a verified stable build + SHA-256 check, login/relay configuration guidance, config backup/restore, and free system cleanup utilities (adware/360 removal, winget software manager, health check). Public edition free. *(Self-submitted by the author.)*
 
 ## Mirror & Relay Services
 
