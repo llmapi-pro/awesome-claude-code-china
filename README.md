@@ -44,6 +44,7 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 - [PackyCode](https://www.packyapi.com) — Multi-provider API relay focused on Claude Code.
 - [AIGoCode](https://aigocode.com) — Integrated Claude Code / Codex / Gemini platform.
 - [DMXAPI](https://www.dmxapi.cn) — Multi-model relay with enterprise plans.
+- [Twinkle Model](https://big-model.smart-agi.com) — OpenAI-compatible relay built on sub2api (official-subscription channels) covering GPT, Claude (Kiro high-cache / CC-MAX), Grok, GLM, DeepSeek and Kimi; per-group multiplier pricing, Alipay top-up from ¥1. *(Disclosure: submitted by the operator.)*
 - [hvoy.ai](https://hvoy.ai) — Public price-tracking and ranking dashboard for Claude API relay services.
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
