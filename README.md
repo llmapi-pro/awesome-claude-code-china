@@ -57,6 +57,7 @@ Desktop and CLI tools that manage Claude Code configuration profiles, subscripti
 - [ding113/claude-code-hub](https://github.com/ding113/claude-code-hub) — Modern Claude Code & Codex API proxy with load balancing, user management, and usage stats.
 - [npow/claude-relay](https://github.com/npow/claude-relay) — Drop-in OpenAI/Anthropic API server routed through Claude Code itself.
 - [chadbyte/clay](https://github.com/chadbyte/claude-relay) — Turn Claude Code into a team workspace, single command across devices.
+- [PBJ-2/clauderipple](https://github.com/PBJ-2/clauderipple) — Local router that puts GPT (via a ChatGPT subscription), DeepSeek, Gemini, GLM, Kimi and other OpenAI-compatible models into Claude Code and the Claude desktop app's Code tab, including subagents, while Claude requests stay on the user's own Claude subscription.
 
 ## Self-Hosted Relay Tools
 
