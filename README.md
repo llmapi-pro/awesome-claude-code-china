@@ -45,6 +45,7 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 - [AIGoCode](https://aigocode.com) — Integrated Claude Code / Codex / Gemini platform.
 - [DMXAPI](https://www.dmxapi.cn) — Multi-model relay with enterprise plans.
 - [hvoy.ai](https://hvoy.ai) — Public price-tracking and ranking dashboard for Claude API relay services.
+- [Zerouter](https://www.zerouter.ai) — Pay-per-token Anthropic- and OpenAI-compatible gateway (`ANTHROPIC_BASE_URL=https://api.zerouter.ai`) for Claude Code, Codex and Cursor; public per-model price table next to official prices, no monthly plan.
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
 
