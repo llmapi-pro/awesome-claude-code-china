@@ -46,7 +46,6 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 - [DMXAPI](https://www.dmxapi.cn) — Multi-model relay with enterprise plans.
 - [TeamoRouter](https://teamorouter.com) — Anthropic-native and OpenAI-compatible gateway with Claude Code and Codex CLI setup guides, pay-as-you-go USD balance, Alipay / WeChat / card / USDT top-up. *(Disclosure: submitted by the TeamoRouter team.)*
 - [hvoy.ai](https://hvoy.ai) — Public price-tracking and ranking dashboard for Claude API relay services.
-- [zhaoshengxiong/awesome-claude-code-codex-relay](https://github.com/zhaoshengxiong/awesome-claude-code-codex-relay) — Directory of Claude Code / Codex relays with 6-hourly endpoint availability probes (GitHub Actions, raw data committed). *(Disclosure: maintained by the TeamoRouter team.)*
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
 
