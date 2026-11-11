@@ -45,6 +45,7 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 - [AIGoCode](https://aigocode.com) — Integrated Claude Code / Codex / Gemini platform.
 - [DMXAPI](https://www.dmxapi.cn) — Multi-model relay with enterprise plans.
 - [hvoy.ai](https://hvoy.ai) — Public price-tracking and ranking dashboard for Claude API relay services.
+- [麦多 API (MadeMore API)](https://api.mddtech.cn/) — Anthropic- and OpenAI-protocol-compatible relay for Claude Code and Codex CLI: get a key in one click (no signup, no email), point the tool at it with two environment variables, then pay per token from a prepaid balance that stops at zero. *(Disclosure: submitted by the service operator.)*
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
 
@@ -57,6 +58,7 @@ Desktop and CLI tools that manage Claude Code configuration profiles, subscripti
 - [ding113/claude-code-hub](https://github.com/ding113/claude-code-hub) — Modern Claude Code & Codex API proxy with load balancing, user management, and usage stats.
 - [npow/claude-relay](https://github.com/npow/claude-relay) — Drop-in OpenAI/Anthropic API server routed through Claude Code itself.
 - [chadbyte/clay](https://github.com/chadbyte/claude-relay) — Turn Claude Code into a team workspace, single command across devices.
+- [kanfangwang/ccpkit](https://github.com/kanfangwang/ccpkit) — Switch Claude Code / Codex CLI between providers with one command (`ccpkit use <name>`). Keeps each provider — official API, relay, or your own gateway — as a named profile and writes the client config for you, backing up the old one first. Works with any Anthropic- or OpenAI-compatible endpoint; also ships a local web UI (`ccpkit ui`) and a Windows `.exe` for people who would rather click than type. *(Disclosure: the author also operates the 麦多 API relay listed above.)*
 
 ## Self-Hosted Relay Tools
 
