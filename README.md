@@ -44,6 +44,7 @@ Anthropic-protocol-compatible API relay services accessible from China. **Listed
 - [PackyCode](https://www.packyapi.com) — Multi-provider API relay focused on Claude Code.
 - [AIGoCode](https://aigocode.com) — Integrated Claude Code / Codex / Gemini platform.
 - [DMXAPI](https://www.dmxapi.cn) — Multi-model relay with enterprise plans.
+- [GPTZZZ](https://gptzzz.ai/) — Pay-as-you-go Claude Messages relay with a [Chinese Claude Code setup guide](https://gptzzz.ai/docs/) and [public model-group pricing](https://gptzzz.ai/pricing/). *(Disclosure: submitted by the service operator.)*
 - [hvoy.ai](https://hvoy.ai) — Public price-tracking and ranking dashboard for Claude API relay services.
 
 > Want to suggest one? See [Contributing](#contributing). Entries must include a public homepage and an active maintainer.
